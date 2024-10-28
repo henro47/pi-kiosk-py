@@ -1,0 +1,1 @@
+git clone https://github.com/henro47/pi-kiosk-py
