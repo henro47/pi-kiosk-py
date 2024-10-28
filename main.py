@@ -1,8 +1,8 @@
 import subprocess
 
 # Replace these with your Wi-Fi credentials
-SSID = "SSID"
-PASSWORD = "PASSWORD"
+SSID = "WIFI_SSID"
+PASSWORD = "WIFI_PASSWORD"
 URL = "URL"
 
 def connect_wifi(ssid, password):
@@ -17,7 +17,7 @@ def connect_wifi(ssid, password):
 def run_chrome(url):
     try:
         # Replace 'chromium' with 'chromium-browser' if that's your executable
-        subprocess.run(["chromium-browser --kiosk ", url], check=True)
+        subprocess.run(["chromium-browser", "--noerrdialogs", "--disable-session-crashed-bubble", "--disable-infobars", "--start-maximized", "--kiosk", url], check=True)
         print("chrome started")
     except subprocess.CalledProcessError as e:
         print(f"Failed to start Chromium: {e}")
