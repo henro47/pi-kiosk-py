@@ -1,4 +1,9 @@
-git clone https://github.com/henro47/pi-kiosk-py
+Clone repo to local machine via this command in terminal:
+- git clone https://github.com/henro47/pi-kiosk-py
 
-sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
-@lxterminal -e /home/<username>/Documents/pi-kiosk-py/start_py_script.sh
+Autostart script on startup (raspberry pi):
+ - sudo nano ~./config/wayfire.ini
+ - scroll to buttom of file in terminal
+ - add:
+    [autostart]
+    1 = python3 $HOME/path_to_repo/main.py
