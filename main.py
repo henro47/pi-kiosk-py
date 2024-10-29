@@ -16,7 +16,7 @@ def connect_wifi(ssid, password):
 
 def run_chrome(url):
     try:
-        # Replace 'chromium' with 'chromium-browser' if that's your executable
+        # Replace 'chromium-browser' with 'chromium' if that's your executable
         subprocess.run(["chromium-browser", "--noerrdialogs", "--disable-session-crashed-bubble", "--disable-infobars", "--start-maximized", "--kiosk", url], check=True)
         print("chrome started")
     except subprocess.CalledProcessError as e:
