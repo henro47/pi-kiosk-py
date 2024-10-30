@@ -14,13 +14,21 @@ def connect_wifi(ssid, password):
     except subprocess.CalledProcessError as e:
         print(f"Failed to connect: {e}")
 
-def run_chrome(url):
+#TODO introduce command line args to switch between firefox / chromium
+#def run_chrome(url):
+#    try:
+#        # Replace 'chromium-browser' with 'chromium' if that's your executable
+#        subprocess.run(["chromium-browser", "--noerrdialogs", "--disable-session-crashed-bubble", "--disable-infobars", "--start-fullscreen", "--kiosk", url], check=True)
+#        print("chrome started")
+#    except subprocess.CalledProcessError as e:
+#        print(f"Failed to start Chromium: {e}")
+
+def run_firefox(url):
     try:
-        # Replace 'chromium-browser' with 'chromium' if that's your executable
-        subprocess.run(["chromium-browser", "--noerrdialogs", "--disable-session-crashed-bubble", "--disable-infobars", "--start-fullscreen", "--kiosk", url], check=True)
-        print("chrome started")
+        subprocess.run(["firefox", "-kiosk", url], check=True)
+        print("firefox started")
     except subprocess.CalledProcessError as e:
-        print(f"Failed to start Chromium: {e}")
+        print(f"Failed to start firefox: {e}")
 
 if __name__ == "__main__":
     connect_wifi(SSID, PASSWORD)
