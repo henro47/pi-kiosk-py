@@ -41,7 +41,6 @@ if __name__ == "__main__":
         print("Please provide f (firefox) /c (chrome) as a command line argument")
         sys.exit(1)
     if str(argumentList[0]) != "f" and str(argumentList[0]) != "c":
-        print(argumentList[0])
         print("Invalid argument. Please provide f (firefox) /c (chrome) as a command line argument")
         sys.exit(1)
     connect_wifi(SSID, PASSWORD, argumentList[0])
