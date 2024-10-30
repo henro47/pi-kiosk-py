@@ -13,7 +13,7 @@
 **Autostart script on startup (raspberry pi & X11 window manager) Stable:**
  - sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
  - add to bottom of file:
-   @lxterminal -e "python3 /home/<username>/pi-kiosk-py/main.py f" &
+   @python3 /home/path_to_repo/main.py f
  - CRTL + X to save file
 
 
